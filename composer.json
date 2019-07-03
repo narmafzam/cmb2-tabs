@@ -1,0 +1,14 @@
+{
+  "name": "narmafzam/cmb2-tabs",
+  "license": "proprietary",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Tab\\": "src/Tab"
+    }
+  },
+  "require": {
+    "php": ">=5.3"
+  },
+  "minimum-stability": "dev"
+}
