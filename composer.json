@@ -5,7 +5,10 @@
   "autoload": {
     "psr-4": {
       "Tab\\": "src/Tab"
-    }
+    },
+    "files": [
+      "cmb2-tab.php"
+    ]
   },
   "require": {
     "php": ">=5.3"
