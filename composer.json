@@ -2,6 +2,13 @@
   "name": "narmafzam/cmb2-tabs",
   "license": "proprietary",
   "type": "project",
+  "authors": [
+    {
+      "name": "Farshad Asgharzade",
+      "email": "farshadasgharzade@gmail.com",
+      "role": "Developer"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Tab\\": "src/Tab"
