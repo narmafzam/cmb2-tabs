@@ -82,13 +82,13 @@ class Tab
     public function getPathUrl($path, $protocol = 'http://')
     {
         $url  = '';
-        if (function_exists('get_home')) {
+        if (function_exists('get_home_path')) {
             if (defined('WP_SITEURL')) {
                 $url = WP_SITEURL ;
             } elseif (function_exists('get_site_url')) {
                 $url = get_site_url();
             }
-            $url .= str_replace(get_home(), '', realpath($path));
+            $url .= str_replace(get_home_path(), '', realpath($path));
         }
 
         return $url;
