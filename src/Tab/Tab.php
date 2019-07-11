@@ -79,18 +79,20 @@ class Tab
         wp_enqueue_style( 'cmb-tabs-dark-mode' );
     }
 
-    public function getPathUrl($path, $protocol = 'http://')
+    public function getPathUrl($path)
     {
         $url  = '';
-        if (function_exists('get_home_path')) {
-            if (defined('WP_SITEURL')) {
-                $url = WP_SITEURL ;
-            } elseif (function_exists('get_site_url')) {
-                $url = get_site_url();
-            }
-            $url .= str_replace(get_home_path(), '', realpath($path));
+        if (defined('WP_SITEURL')) {
+            $url = WP_SITEURL ;
+        } elseif (function_exists('get_site_url')) {
+            $url = get_site_url();
         }
-
+        $url = rtrim($url, '/') . '/';
+        if (function_exists('get_home_path')) {
+            $url .= str_replace(get_home_path(), '', realpath($path));
+        } else {
+            $url .= str_replace($_SERVER['DOCUMENT_ROOT'], '', realpath($path));
+        }
         return $url;
     }
 }
