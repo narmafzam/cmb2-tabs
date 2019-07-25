@@ -18,7 +18,8 @@
     ]
   },
   "require": {
-    "php": ">=5.3"
+    "php": ">=5.3",
+    "narmafzam/generic": "1.0.7"
   },
   "minimum-stability": "dev"
 }
