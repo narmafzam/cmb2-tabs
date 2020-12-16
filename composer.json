@@ -19,7 +19,7 @@
   },
   "require": {
     "php": ">=5.3",
-    "narmafzam/generic": "1.0.7"
+    "narmafzam/generic": "1.0.8"
   },
   "minimum-stability": "dev"
 }
